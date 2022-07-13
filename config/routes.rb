@@ -7,8 +7,14 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   # get 'pages/contact'
   get 'contact', to: 'pages#contact'
-  resources :blogs
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resources :blogs do
+    member do
+      get :toggle_status
+    end
+  end
 
+
+
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   # Defines the root path route ("/")
 end

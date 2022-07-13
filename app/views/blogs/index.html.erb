@@ -2,13 +2,28 @@
 
 <h1>Blogs</h1>
 
-<div id="blogs">
+<table>
+  <thead>
+  <tr>
+    <th>Blog Title</th>
+    <th>Body</th>
+    <th colspan="4"></th>
+  </tr>
+  </thead>
+
+  <tbody>
   <% @blogs.each do |blog| %>
-    <%= render blog %>
-    <p>
-      <%= link_to "Show this blog", blog %>
-    </p>
+    <tr>
+      <td><%= blog.title %></td>
+      <td><%= blog.body %></td>
+      <td><%= link_to blog.status, toggle_status_blog_path(blog) %></td>
+      <td><%= link_to 'Show', blog %></td>
+      <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
+      <td><%= link_to 'Delete Blog', blog, method: :delete, data: {turbo_method: :delete, confirm: 'Are you sure?'} %></td>
+    </tr>
   <% end %>
-</div>
+  </tbody>
+</table>
+
 
 <%= link_to "New blog", new_blog_path %>
