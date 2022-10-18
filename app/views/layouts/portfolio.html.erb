@@ -18,9 +18,7 @@
 <%= render "shared/navbar", location: 'top' %>
 <%= login_register_button_toggle_helper %>
 <%= yield %>
+<%= source_tracker_helper %>
 
-<% if session[:source] %>
-  <p>Thanks <%= session[:source] %></p>
-<% end %>
 </body>
 </html>
