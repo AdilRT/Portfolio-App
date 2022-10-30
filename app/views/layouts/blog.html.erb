@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= stylesheet_link_tag "blogs", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 </head>
 
@@ -15,9 +15,9 @@
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= render "shared/navbar", location: 'top' %>
 <%= login_register_button_toggle_helper %>
 <%= yield %>
+<%= render "shared/navbar", location: 'bottom' %>
 <%= source_tracker_helper %>
 
 </body>

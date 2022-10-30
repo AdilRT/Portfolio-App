@@ -1,10 +1,27 @@
-<p style="color: green"><%= notice %></p>
+<!--<p style="color: green"><%#= notice %></p>-->
 
-<%= render @blog %>
+<%#= render @blog %>
 
-<div>
-  <%= link_to "Edit this blog", edit_blog_path(@blog) %> |
-  <%= link_to "Back to blogs", blogs_path %>
+<!--<div>-->
+<!--  <%#= link_to "Edit this blog", edit_blog_path(@blog) %> |-->
+  <%#= link_to "Back to blogs", blogs_path %>
 
-  <%= button_to "Destroy this blog", @blog, method: :delete %>
-</div>
+  <%#= button_to "Destroy this blog", @blog, method: :delete %>
+<!--</div>-->
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @blog.body %>
+</p>
+
+<%= link_to "Edit this blog", edit_blog_path(@blog) %> |
+<%= link_to "Back to blogs", blogs_path %>
+
+<%= button_to "Destroy this blog", @blog, method: :delete %>
