@@ -13,6 +13,9 @@
 
  */
 
-.top a{
-    color: red;
-}
+//.top a{
+//    color: red;
+//}
+
+// Custom bootstrap variables must be set or imported *before* bootstrap.
+@import "bootstrap";
