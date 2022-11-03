@@ -15,5 +15,8 @@ module ApplicationHelper
       content_tag(:div, "Thanks for visiting me from #{session[:source]}", class: "source-greeting")
     end
   end
-
+  
+  def generate_copyright
+    AadilViewTool::Renderer.cppyright 'Aadil RT', 'All rights reserved.'
+  end
 end
