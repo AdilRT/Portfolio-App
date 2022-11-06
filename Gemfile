@@ -72,3 +72,4 @@ gem 'jquery-rails'
 gem 'pry', '~> 0.13.1'
 gem "ruby-lsp", "~> 0.3.5", :group => :development
 gem 'aadil_view_tool', '~> 0.1.0'
+gem 'petergate', '~> 3.0'
