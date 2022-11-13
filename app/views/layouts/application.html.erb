@@ -12,16 +12,19 @@
   <%= javascript_importmap_tags %>
 </head>
 
-<body>
+<body class = "text-center">
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= render "shared/navbar", location: "top" %>
-<%= login_register_button_toggle_helper %>
-<%= yield %>
-<%= source_tracker_helper %>
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <%= render "shared/application_navbar" %>
+      <%= login_register_button_toggle_helper %>
+      <%= yield %>
+      <%= source_tracker_helper %>
+      <%= generate_copyright %>
+    </div>
 
-<%= generate_copyright %>
+
 
 </body>
 </html>
